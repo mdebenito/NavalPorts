@@ -1,0 +1,7 @@
+*.log
+*.sql
+*.sqlite
+idea
+.idea
+node_modules
+dist
