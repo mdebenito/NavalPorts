@@ -1,0 +1,29 @@
+table {
+  background:{
+    color: #ccf9f7;
+  }
+  opacity: 0.9;
+  filter: alpha(opacity=90); /* For IE8 and earlier */
+  thead{
+    text-align:center;
+
+  }
+  thead{
+    background:{
+      color: #178eb7;
+    }
+    color:white;
+  }
+  td{
+    padding:5px;
+  }
+}
+body{
+  background:{
+    color: #53c2f9;
+    image: url(../img/bg.jpg);
+    attachment: fixed;
+    repeat:no-repeat;
+  }
+  font-family:Verdana;
+}

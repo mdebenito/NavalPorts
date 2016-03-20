@@ -124,9 +124,9 @@ gulp.task('serve', ['html', 'imagemin', 'css', 'js', 'libs'], function() {
     browserSync.init({
         injectChanges: true,
         logLevel: "info",
-        browser: ["google chrome", "Firefox"],
+        browser: ["google chrome"],
         proxy: "localhost:80",
-        startPath: "/JS-PEC1_P7/dist/"
+        startPath: "/NavalPorts/dist/"
     });
 
 
