@@ -74,9 +74,9 @@ function startPortTimersTool(){
 function showPortTimersTool(){
 
     var text = "<div class='table-responsive'><table class='table-bordered table-hover'><thead><tr><td></td>";
-    for(k=0;k<=24;k++) {
+    for(k=0;k<=23;k++) {
         if(k % 2 === 0)
-            text+="<td><h3>"+k+" to "+(k+1)+"</h3></td>";
+            text+="<td><h3>"+k+" to "+(k+2)+"</h3></td>";
     }
     text+="</tr></thead><tbody>";
 
@@ -84,7 +84,7 @@ function showPortTimersTool(){
     for (i = 0; i < Nations.Nations.length; i++) {
         var nation = Nations.Nations[i];
         text +="<tr><td><h3>"+nation.Name+"</h3></td>";
-        for(k=0;k<=24;k++) {
+        for(k=0;k<=23;k++) {
             if (k % 2 === 0) {
                 text += "<td>";
                 for (j = 0; j < Ports.length; j++) {
