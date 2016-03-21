@@ -38,7 +38,7 @@ gulp.task('clean', function(cb) {
 
 // Copia de los cambios en los ficheros html en el directorio dist.
 gulp.task('html', function() {
-    return gulp.src([srcPaths.files+'*.html'])
+    return gulp.src([srcPaths.files+'*.html',srcPaths.files+'*.ico'])
         .pipe(gulp.dest(distPaths.files))
         .pipe(browserSync.stream());
 });

@@ -72,8 +72,8 @@ function startPortTimersTool(){
     }
 }
 function showPortTimersTool(){
-
-    var text = "<div class='table-responsive'><table class='table-bordered table-hover'><thead><tr><td></td><td>No timer</td>";
+    var time = hours+":"+minutes;
+    var text = "<div class='table-responsive'><table class='table-bordered table-hover'><thead><tr><td class='filler'>Server time:<br>"+time+"</td><td>No timer</td>";
     for(k=0;k<=23;k++) {
         if(k % 2 === 0)
             text+="<td><h3>"+k+" to "+(k+2)+"</h3></td>";
@@ -82,11 +82,21 @@ function showPortTimersTool(){
 
 
     for (i = 0; i < Nations.Nations.length; i++) {
+
         var nation = Nations.Nations[i];
         text +="<tr><td><h3>"+nation.Name+"</h3></td>";
         for(k=-1;k<=23;k++) {
+            var minusone = k-1;
+            if(minusone <0 ) minusone +=24;
             if (k % 2 === 0 || k === -1) {
-                text += "<td>";
+                var className = "";
+                if((hours >= k && hours < (k+2)) || k < 0){
+                    className ="current-window";
+                }else if(k >= minusone && k < hours){
+                    alert((hours-1)%24);
+                    className ="close-window";
+                }
+                text += "<td class='"+className+"'>";
                 for (j = 0; j < Ports.length; j++) {
                     var port = Ports[j];
                     if (port.Nation === nation.Id && port.ConquestFlagTimeSlot === k)
