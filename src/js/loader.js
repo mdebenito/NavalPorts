@@ -93,7 +93,6 @@ function showPortTimersTool(){
                 if((hours >= k && hours < (k+2)) || k < 0){
                     className ="current-window";
                 }else if(k >= minusone && k < hours){
-                    alert((hours-1)%24);
                     className ="close-window";
                 }
                 text += "<td class='"+className+"'>";
