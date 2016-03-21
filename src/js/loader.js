@@ -72,7 +72,7 @@ function startPortTimersTool(){
     }
 }
 function showPortTimersTool(){
-    var time = hours+":"+minutes;
+    var time = ("0"+hours).slice(-2)+":"+("0"+minutes).slice(-2);
     var text = "<div class='table-responsive'><table class='table-bordered table-hover'><thead><tr><td class='filler'>Server time:<br>"+time+"</td><td>No timer</td>";
     for(k=0;k<=23;k++) {
         if(k % 2 === 0)
