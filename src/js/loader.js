@@ -92,8 +92,6 @@ function showPortTimersTool(){
                 var className = "";
                 if((hours >= k && hours < (k+2)) || k < 0){
                     className ="current-window";
-                }else if(k >= minusone && k < hours){
-                    className ="close-window";
                 }
                 text += "<td class='"+className+"'>";
                 for (j = 0; j < Ports.length; j++) {
