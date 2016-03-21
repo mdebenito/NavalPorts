@@ -78,11 +78,11 @@ function showPortTimersTool(){
         if(k % 2 === 0)
             text+="<td><h3>"+k+" to "+(k+2)+"</h3></td>";
     }
-    text+="</tr></thead><tbody>";
+    text+="<td># Ports</td></tr></thead><tbody>";
 
 
     for (i = 0; i < Nations.Nations.length; i++) {
-
+        var portCounter = 0;
         var nation = Nations.Nations[i];
         text +="<tr><td><h3>"+nation.Name+"</h3></td>";
         for(k=-1;k<=23;k++) {
@@ -99,12 +99,15 @@ function showPortTimersTool(){
                 text += "<td class='"+className+"'>";
                 for (j = 0; j < Ports.length; j++) {
                     var port = Ports[j];
-                    if (port.Nation === nation.Id && port.ConquestFlagTimeSlot === k)
+                    if (port.Nation === nation.Id && port.ConquestFlagTimeSlot === k){
                         text += port.Name + "<br>";
+                        portCounter++;
+                    }
                 }
                 text += "</td>";
             }
         }
+        text +="<td>"+portCounter+"</td>";
     }
 
     text += "</tbody></table></div>";
