@@ -10,8 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/mdebenito/NavalPorts.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Mario de Benito",
+  "organization": "Mario de Benito",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mdebenito/NavalPorts/issues"
   },
@@ -23,11 +24,11 @@
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-jshint": "^2.0.0",
+    "gulp-license": "^1.0.0",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
     "jshint": "^2.9.1",
     "jshint-stylish": "^2.1.0"
   }
-
 }

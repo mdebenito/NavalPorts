@@ -7,7 +7,8 @@ var gulp        = require('gulp'),
     stylish     = require('jshint-stylish'),
     sass        = require('gulp-sass'),
     sourcemaps  = require('gulp-sourcemaps'),
-    uglify      = require('gulp-uglify');
+    uglify      = require('gulp-uglify'),
+    license     = require('gulp-license');
 
 
 // Definición de direcotrios origen
@@ -101,6 +102,7 @@ gulp.task('js', ['lint'], function() {
         .pipe(sourcemaps.init())
         .pipe(concat('all.min.js'))
         .pipe(uglify())
+        .pipe(license('MIT', {tiny: false, organization:'Mario de Benito <mariodebenito(at)gmail.com>'}))
         .pipe(sourcemaps.write('maps'))
         .pipe(gulp.dest(distPaths.scripts))
         .pipe(browserSync.stream());
