@@ -1,3 +1,11 @@
+header, footer{
+  width:100%;
+  background:rgba(0,0,0,0.9);
+  padding:20px;
+  color:white;
+  margin:20px;
+  border-radius:5px;
+}
 table {
   background:{
     color: #ccf9f7;
@@ -35,4 +43,9 @@ body{
 }
 .filler{
   background-color: #3468ff;
+}
+#ads{
+  width:100%;
+  text-align:center;
+  margin:30px auto 30px auto;
 }
